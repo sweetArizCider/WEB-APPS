@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booleans</title>
+
+    <style>
+    button{
+    background-color: black;
+    color: antiquewhite;
+    }
+    </style>
+  </head>
+
+  <body style="background-color: gray;", align="center">
+
+    <h1>Rock Paper Scissors</h1>
+
+    <button onclick="
+    choice = 'Rock';
+    computerChoice = randomChoice();
+    checkResult(computerChoice, choice);
+
+    ">Rock</button>
+
+    <button onclick="
+    choice = 'Paper'
+    computerChoice = randomChoice();
+    checkResult(computerChoice, choice);
+    ">Paper</button>
+
+
+    <button onclick="
+    choice = 'Scissors'
+    computerChoice = randomChoice();
+    checkResult(computerChoice, choice);
+    ">Scissors</button>
+
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+
+    <button onclick="
+    localStorage.removeItem('score');
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    updateScoreDisplay();
+
+    ">Reset Score</button>
+
+
+    <script>
+      const scoreDisplay = document.querySelector('.js-score');
+      const movesDisplay = document.querySelector('.js-moves');
+      const resultDisplay = document.querySelector('.js-result');
+      let score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0,
+        ties: 0
+        }
+      updateScoreDisplay();
+      /*
+      if (!score)
+      {
+      score = 
+      {
+      wins: 0,
+      losses: 0,
+      ties: 0
+      }
+      };
+      */
+
+      let choice, computerChoice;
+
+
+
+      function randomChoice() {
+        const randomNumber = Math.floor(Math.random() * 3);
+        switch (randomNumber) {
+            case 0:
+          return 'Rock';
+            case 1:
+          return 'Paper';
+            case 2:
+          return 'Scissors';
+        }
+      }
+
+      function checkResult(computerChoice, playerChoice)
+      {
+        if (computerChoice === playerChoice)
+        {
+          score.ties++;
+          resultDisplay.innerHTML = ("... I'ts a Tie!");
+          
+
+        }
+
+        else if (
+          (computerChoice === 'Rock' && playerChoice === 'Scissors')||
+          (computerChoice === 'Paper' && playerChoice === 'Rock') ||
+          (computerChoice === 'Scissors' && playerChoice === 'Paper')
+        )
+        {
+          score.losses++;
+          resultDisplay.innerHTML = ("... You Lose!");
+          
+
+        }
+        else
+        {
+          score.wins++;
+          resultDisplay.innerHTML = ("... You Win!"); 
+          
+
+        }
+        localStorage.setItem('score', JSON.stringify(score));
+        updateScoreDisplay();
+        updateMovesDisplay(computerChoice, playerChoice);
+      }
+      
+
+    function updateScoreDisplay()
+    {
+      scoreDisplay.innerHTML = (`wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`);
+    }
+
+    function updateMovesDisplay(computerChoice, playerChoice)
+    {
+      movesDisplay.innerHTML = (`The computer choose ${computerChoice}, You choose ${playerChoice}...`)
+    }
+
+
+
+  </script>
+
+  </body>
+</html>

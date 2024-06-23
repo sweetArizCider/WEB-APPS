@@ -1,0 +1,34 @@
+nav{
+  background-color: black;
+}
+ul{
+  text-align: center;
+}
+
+ul li{
+  color: white;
+  display: inline;
+  font-size: 40px;
+  margin-right: 100px;
+}
+
+ul li:hover{
+  color: orange;
+  font-size: 55px;
+}
+
+div.contenedor{
+  background-color: orange;
+  text-align: center;
+  width: 85%;
+  margin:auto;
+  height: 820px;
+}
+
+body{
+  background-color: peru;
+}
+
+img{
+  width: 50%;
+}

@@ -1,0 +1,43 @@
+body{
+  background-color: gray;
+}
+
+#cuadro{
+  
+  width: 50%;
+  background-color: orange;
+  border: solid;
+  border-color: rebeccapurple;
+  margin: 20px 25%;
+  border-radius: 10%;
+  height: 700px;
+  padding-left: 50px;
+  font-size: 25px;
+}
+
+h1{
+  color: rebeccapurple;
+  text-align: center;
+  padding-right: 50px;
+}
+
+input[type=text], input[type=password]{
+  background-color: orange;
+  border: none;
+  border-bottom: solid red;
+  width: 50%;
+  padding-left: 10px 20px;
+}
+
+#boton{
+  background-color: black;
+  color: aquamarine;
+  width: 120px;
+  height: 70px;
+  font-size: 20px;
+}
+
+#centraboton{
+  text-align: center;
+  padding-right: 80px;
+}

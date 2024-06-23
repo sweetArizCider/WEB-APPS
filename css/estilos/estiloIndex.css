@@ -1,0 +1,15 @@
+body, html {
+  margin: 0;
+  padding: 0; 
+  color: #051A1F;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal
+}
+
+a{
+  color: #051A1F;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal
+}

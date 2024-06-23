@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/estilos/formularios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+10+Charted&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <h2>Informacion sobre el producto</h2>
+    <div>
+      <form action="">
+        <fieldset>
+          <legend>Datos basicos</legend>
+          <label for="nombre">Nombre</label>
+          <br>
+          <input type="text" name="nombre">
+          <br><br>
+          <label for="comentarios">Descripcion</label>
+          <br>
+          <textarea name="comentarios"></textarea>
+          <br><br>
+          <label for="foto">Foto</label><br>
+          <input type="file" name="foto">
+          <br><br>
+          <input type="checkbox" name="visitas" id="visitas"> Anadir contador de visitas
+          <br>  
+          </fieldset>
+
+          <fieldset>
+            <legend>Datos economicos</legend>
+            <label for="precio">Precio</label><br>
+            <input type="text" name="precio"> $
+            <br><br>
+            <label for="impuestos">Impuestos</label>
+            <br>
+            <select name="impuestos">
+                <option value="opcion1">4%</option>
+                <option value="opcion2">7%</option>
+                <option value="opcion3">16%</option>
+                <option value="opcion4">25%</option>
+            </select>
+            <br><br>
+            <label for="tipo">Promocion</label><br>
+            <input type="radio" name="tipo" value="ninguno"> Ninguno <br>
+            <input type="radio" name="tipo" value="transporte"> Transporte gratuito <br>
+            <input type="radio" name="tipo" value="descuento"> Descuento 5%
+            <br><br>
+            <a href="../../Unidades/unidad1.html"><h2>Regresar</h2></a>
+          </fieldset>
+      </form>
+    </div>
+    
+    
+  </body>
+</html>

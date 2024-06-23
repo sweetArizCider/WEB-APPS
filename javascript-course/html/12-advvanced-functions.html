@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions</title>
+  </head>
+
+  <body>
+    <button class="js-botton">Click</button>
+    <script>
+      const buttonElement = document.querySelector(".js-botton")
+
+      const eventListener = () => console.log("Click");
+
+      buttonElement.addEventListener('click', eventListener);
+      buttonElement.removeEventListener('click', eventListener);
+      buttonElement.addEventListener('click', () => {
+        console.log("Click2");
+      });
+
+      /*
+      function greeting(){
+        console.log('hello');
+      }
+      greeting();
+
+      const num = 2;
+      const function1 = function (){
+        console.log('hello2');
+      }
+      console.log(function1);
+      console.log(typeof(function1));
+      function1();
+
+      const object1 = {
+        num: 2,
+        fun: function (){
+          console.log('hello3');
+        }
+      };
+
+      function display(param){
+        console.log(param);
+      }
+      object1.fun(); 
+      display(3);
+
+      function run(param){
+        param();
+      }
+
+      run(object1.fun);
+
+     */
+      /*
+     [
+      'make dinner',
+      'wash dishes',
+      'watch youtube'
+     ].forEach((value, index) => {
+      if(value === 'wash dishes'){
+        return;
+      }
+      console.log(value);
+      console.log(index);
+     });
+
+     const arrowFunction = () => {
+      console.log("Hello");
+     }
+
+     arrowFunction();
+
+     const oneParam = x => {
+      console.log(x + 1);
+     };
+     oneParam(2);
+
+     const oneLine = () => 2 + 3;
+     console.log(oneLine());
+
+     const object2 = {
+      method(){
+
+      }
+     };*/
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+body
+{
+  background-color: gray;
+  margin-top: 80px;
+}
+
+h1
+{
+  background-color: yellow;
+  color: red;
+  text-align: center;
+}
+
+#contenedor
+{
+  background-color: purple;
+  width: 80;
+  border-style: solid;
+  border-color: black;
+}
+
+.rojo{
+  color: red;
+}
+
+.verde{
+  color: green;
+}
+
+.azul{
+  color: blue;
+}
+
+.amarillo{
+  color: yellow;
+}
+
+.contenedores{
+  margin-left: 120px;
+  margin-right: 120px;
+  align-items: center;
+  background-color: red;
+}
+
+#texto{
+  width: 60%;
+  background-color: silver;
+  margin: auto;
+}
+
+#otro{
+  background-color: blue;
+  width: 40%;
+  margin: auto;
+  border-style: solid;
+  border-color: white;
+  text-align: center;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}

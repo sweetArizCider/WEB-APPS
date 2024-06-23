@@ -1,0 +1,96 @@
+body{
+  font-size: 260%;
+  background-color: #0C1B33;
+  color: var(--color-texto);
+  width: 70%;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: auto;
+}
+*:root{
+  --color-texto:#E7D7C1;
+}
+input[type = text], 
+input[type = password], 
+input[type = date],
+textarea,
+input[type = file],
+input[type = email]{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 52%;
+  color: #0C1B33;
+  background-color: #E7D7C1;
+  padding: 10px 10px;
+  border: none;
+  height: 25px;
+  width: 58%;
+}
+
+
+
+::placeholder{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100%;
+  color: #0C1B33;
+}
+
+
+
+input[type = submit], input[type = reset],
+button{
+  width: 200px;
+  height: 50px;
+  border: none;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40%;
+  color: #0C1B33;
+  background-color: #E7D7C1;
+
+}
+
+input[type = checkbox], 
+input[type = radio],
+input{
+  width: 20px;
+  height: 20px;
+  background-color: #E7D7C1;
+  color: #E7D7C1;
+}
+
+
+a{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100%;
+  color: #E7D7C1;
+}
+
+select {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 52%;
+  color: #0C1B33; /* Color del texto del select */
+  background-color: #E7D7C1;
+  padding: 10px 10px;
+  border: none;
+  height: 25px;
+  width: 58%;
+}
+
+select option {
+  color: #0C1B33; /* Color del texto de las opciones del select */
+}
+.especial{
+  color:#000;
+}
+
+

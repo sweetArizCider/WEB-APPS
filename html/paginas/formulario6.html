@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/estilos/formularios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+10+Charted&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <form action="">
+      <div style="float: left;">
+        <h1>ENCUESTA CAMPUS VIRTUAL</h1>
+        <br><br>
+        <label for="nombre">Nombre</label>
+        <br><br>
+        <label for="departamento">Departamento</label>
+        <br><br>
+        <label for="edificio">edificio</label>
+        <br><br>
+        <label for="email">Email</label>
+        <br><br>
+        <label for="telefono">Telefono</label>
+        <br><br>
+        <label for="pregunta1">Utiliza habitualmente el campus virtual?</label>
+        <br><br>
+        <label for="pregunta2">Estaria interesado/a en recibir formacion 
+          personalizada sobre las posibilidades de esta herramienta
+           informativa?
+        </label>
+      </div>
+      <div style="float: right;">
+        <br><br><br><br><br>
+        <input type="text" name="nombre">
+        <br><br>
+        <select name="departamento">
+            <option value="opcion1">Agricultura y Alimentacion</option>
+        </select>
+        <br><br>
+        <select name="departamento">
+          <option value="opcion1">Edificio Vives</option>
+        </select>
+        <br><br>
+        <input type="text" name="email">
+        <br><br>
+        <input type="text" name="telefono">
+        <br><br>
+        si <input type="radio" name="pregunta1" value="si">
+        no <input type="radio" name="pregunta1" value="no">
+        <br><br>
+        si <input type="radio" name="pregunta2" value="si">
+        no <input type="radio" name="pregunta2" value="no">
+    </div>
+    <div style="float: left; clear: both;">
+      <br><br><br>
+      <h1>CALENDARIO APROXIMADO DE FORMACION</h1>
+      <br><br>
+      <label for="turno">TURNO PREFERENTE</label>
+      <input type="checkbox" name="turno" value="manana">Manana
+      <input type="checkbox" name="turno" value="tarde">Tarde
+      <br><br>
+      <label for="mes">MES PREFERENTE</label>
+      <select name="mes">
+        <option value="octubre">Octubre</option>
+      </select>
+      <br><br>
+      <label for="horario">HORARIO PREFERENTE</label>
+      <select name="horario">
+        <option value="9">9:00</option>
+      </select>
+      <br><br>
+      <label for="comentarios">Comentarios</label>
+      <textarea name="comentarios"></textarea>
+      <br><br>
+      <input type="submit" name="guardar" value="Guardar">
+      <input type="reset" name="reset" value="Borrar">
+      <br><br>
+      <a href="../../Unidades/unidad1.html"><h2>Regresar</h2></a>
+    </div>
+    
+    </form>
+    
+  </body>
+</html>

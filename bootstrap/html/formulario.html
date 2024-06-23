@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <title>FORMULARIO</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../../index.html">PRACTICAS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">TIDSM 3A</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://moodle.uttcampus.edu.mx/login/index.php">MOODLE UTT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        APPLICACIONES WEB
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/Unidades/unidad1.html">UNIDAD 1</a></li>
+                        <li><a class="dropdown-item" href="/Unidades/unidad2.html">UNIDAD 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+<div class="container">
+  <h1>PERSONAS</h1>
+  <br>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">NOMBRE</th>
+        <th scope="col">APELLIDO PATERNO</th>
+        <th scope="col">APELLIDO MATERNO</th>
+        <th scope="col">DIRECCION</th>
+        <th scope="col">TELEFONO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>carlos</td>
+        <td>arizpe</td>
+        <td>hernandez</td>
+        <td>cedros 813, Jardines universidad</td>
+        <td>8719002244</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>jacob</td>
+        <td>thornton</td>
+        <td>scotter</td>
+        <td>cotlan 233, swertzan, uk</td>
+        <td>2312343243</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>josefina</td>
+        <td>hernandez</td>
+        <td>vazquez</td>
+        <td>cedros 813, jardines universidad</td>
+        <td>8719234233</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    REGISTRAR
+  </button> 
+  <button class="btn btn-danger">
+    BORRAR
+  </button>
+  <button class="btn btn-secondary">
+    ACTUALIZAR
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+          <div class="mb-3">
+            <label for="" class="form-label1">NOMBRE</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label1">APELLIDO PATERNO</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label1">APELLIDO MATERNO</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label1">DIRECCION</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label1">TELEFONO</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+
+</body>
+<script src="../js/bootstrap.bundle.min.js"></script>
+</html>

@@ -1,0 +1,42 @@
+body{
+  background-color: #0C1B33;
+}
+
+h1,h2,h3{
+  text-align: center;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 420%;
+  color: #E7D7C1;
+  text-shadow: 5px 5px #806443;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+p{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  color: #E7D7C1;
+  font-style: normal;
+  font-size: 200%;
+  text-align: justify;
+}
+
+p.color::first-letter{
+  font-size: 300%;
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+  color: #806443;
+}
+
+a:hover{
+  color: #E7D7C1
+}
+
+ol{
+  color: #806443;
+}

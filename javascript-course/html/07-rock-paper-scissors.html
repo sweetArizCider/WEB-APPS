@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booleans</title>
+
+  <style>
+    button{
+      background-color: black;
+      color: antiquewhite;
+    }
+  </style>
+</head>
+
+<body style="background-color: gray;", align="center">
+
+  <h1>Rock Paper Scissors</h1>
+  
+  <button onclick="
+    choice = 'Rock';
+    computerChoice = randomChoice();
+    checkResult(computerChoice, choice);
+
+  ">Rock</button>
+
+  <button onclick="
+   choice = 'Paper'
+   computerChoice = randomChoice();
+   checkResult(computerChoice, choice);
+  ">Paper</button>
+
+
+  <button onclick="
+     choice = 'Scissors'
+   computerChoice = randomChoice();
+   checkResult(computerChoice, choice);
+  ">Scissors</button>
+
+  <button onclick="
+  localStorage.removeItem('score');
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  alert(`Score reset wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`);
+
+  ">Reset Score</button>
+
+  <script>
+
+    
+    let score = JSON.parse(localStorage.getItem('score')) || {
+      wins: 0,
+      losses: 0,
+      ties: 0
+    }
+/*
+    if (!score)
+  {
+    score = 
+    {
+      wins: 0,
+      losses: 0,
+      ties: 0
+    }
+  };
+*/
+
+    let choice, computerChoice;
+
+    
+    
+    function randomChoice() {
+    const randomNumber = Math.floor(Math.random() * 3);
+    switch (randomNumber) {
+      case 0:
+        return 'Rock';
+      case 1:
+        return 'Paper';
+      case 2:
+        return 'Scissors';
+    }
+  }
+
+    function checkResult(computerChoice, playerChoice)
+    {
+      if (computerChoice === playerChoice)
+      {
+        score.ties++;
+        alert(`The computer choose ${computerChoice}, You choose ${playerChoice}... It's a tie!
+        wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`);
+        
+        
+      }
+
+      else if (
+        (computerChoice === 'Rock' && playerChoice === 'Scissors')||
+        (computerChoice === 'Paper' && playerChoice === 'Rock') ||
+        (computerChoice === 'Scissors' && playerChoice === 'Paper')
+      )
+        {
+          score.losses++;
+          alert(`The computer choose ${computerChoice}, You choose ${playerChoice}... You Lose! 
+          wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`);
+        
+        }
+      else
+      {
+        score.wins++;
+        alert(`The computer choose ${computerChoice}, You choose ${playerChoice}... You win! 
+        wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`);
+      
+      }
+      localStorage.setItem('score', JSON.stringify(score));
+    }
+    
+
+    
+
+  </script>
+  
+</body>
+</html>

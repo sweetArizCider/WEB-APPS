@@ -8,6 +8,15 @@ const path = require('path')
 const app = express();
 
 app.use(express.static(path.join(__dirname,'..', 'public')));
+app.use('/bootstrap', express.static(path.join(__dirname,'..', 'bootstrap'), {
+    setHeaders: (res, path, stat) => {
+        if (path.endsWith('.css')) {
+            res.setHeader('Content-Type', 'text/css');
+        }
+    }
+}));
+
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
@@ -117,7 +126,7 @@ app.post('/login', (req, res) => {
 
         // Redirect to index.html upon successful login
         res.sendFile(path.join(__dirname, '..', 'index.html'));
-        app.use(express.static(path.join(__dirname, '..', '..', 'HTDOCS')));
+        app.use(express.static(path.join(__dirname, '..', '..', 'WEB-APPS')));
 
     });
 });
@@ -143,6 +152,8 @@ app.get('/register', (req, res) => {
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'login.html'));
 });
+
+
 
 // Redirect to login page if accessing root
 app.get('/', (req, res) => {

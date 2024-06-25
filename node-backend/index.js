@@ -30,8 +30,8 @@ app.use(session({
 
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'applecider',
-    password: 'start',
+    user: 'root',
+    password: 'inicio',
     database: 'nodelogin'
 });
 

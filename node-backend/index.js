@@ -3,14 +3,12 @@ const session = require('express-session');
 const mysql = require('mysql2');
 const bcrypt = require('bcryptjs');
 const bodyParser = require('body-parser');
-const path = require('path');
+const path = require('path')
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
-
-app.use(express.static(path.join(__dirname, '..', 'public')));
-app.use('/bootstrap', express.static(path.join(__dirname, '..', 'bootstrap'), {
+app.use(express.static(path.join(__dirname,'..', 'public')));
+app.use('/bootstrap', express.static(path.join(__dirname,'..', 'bootstrap'), {
     setHeaders: (res, path, stat) => {
         if (path.endsWith('.css')) {
             res.setHeader('Content-Type', 'text/css');
@@ -18,8 +16,10 @@ app.use('/bootstrap', express.static(path.join(__dirname, '..', 'bootstrap'), {
     }
 }));
 
+
+
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true}));
 
 app.use(session({
     secret: 'start',
@@ -37,7 +37,7 @@ const db = mysql.createConnection({
 
 db.connect(error => {
     if (error) throw error;
-    console.log("MySQL Connected...");
+    console.log("MySQL Connected...")
 });
 
 app.post('/register', (req, res) => {
@@ -93,6 +93,9 @@ app.post('/register', (req, res) => {
     });
 });
 
+
+
+
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
@@ -123,9 +126,25 @@ app.post('/login', (req, res) => {
 
         // Redirect to index.html upon successful login
         res.sendFile(path.join(__dirname, '..', 'index.html'));
+        app.use(express.static(path.join(__dirname, '..', '..', 'WEB-APPS')));
+
     });
 });
 
+
+// Routes
+// Register route
+
+app.post('/register', (req, res) => {
+    // Copy the corrected register route handler here
+});
+
+// Login route
+app.post('/login', (req, res) => {
+    // Copy the corrected login route handler here
+});
+
+// Serve static files
 app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'register.html'));
 });
@@ -134,9 +153,14 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'login.html'));
 });
 
+
+
+// Redirect to login page if accessing root
 app.get('/', (req, res) => {
     res.redirect('/login');
 });
+
+const PORT = process.env.PORT || 3000; // Default to port 3000 if PORT environment variable is not set
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on port ${PORT}`);
